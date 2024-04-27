@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#F6C7C7"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/textButton"
+                android:layout_width="206dp"
+                android:layout_height="wrap_content"
+                android:text="Текстовый ввод" />
+
+            <RadioButton
+                android:id="@+id/sliderButton"
+                android:layout_width="137dp"
+                android:layout_height="wrap_content"
+                android:text="Ползунки" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/textLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/redEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Красный (0-255)"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/greenEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Зеленый (0-255)"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/blueEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Синий (0-255)"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sliderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <SeekBar
+                android:id="@+id/redSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:progress="0" />
+
+            <SeekBar
+                android:id="@+id/greenSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:progress="0" />
+
+            <SeekBar
+                android:id="@+id/blueSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="255"
+                android:progress="0" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/createButton"
+            android:layout_width="181dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Создать" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
